@@ -1,7 +1,6 @@
-@props(['id','name','cols','rows','title','old','value'=>null])
+@props(['id','name','cols','rows','value'=>null])
 
 <div class="mb-3">
-    <label for="{{ $name }}" class="form-label">{{ $title }}</label>
     <textarea
 id="{{ $id }}"
  type="text"
@@ -11,7 +10,7 @@ id="{{ $id }}"
  class="form-control"
  id="{{ $id }}"
  placeholder="Enter {{ $name }}">
- {!! $old ? $old : $value!!}
+ {!! $value !!}
 </textarea>
-<x-error name='{{ $name }}'/>
+
 </div>

@@ -12,20 +12,19 @@
                     <form class='form' action="{{ route("admin#blogs#update",$blog->slug)}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <x-input name='title' title="Title" type="text" value="{{ $blog->title }}" :old=" old('title') "/>
+                        <x-input name='title' title="Title" type="text" value="{{ $blog->title }}"/>
 
-                        <x-input name='slug' title="Slug" type="text" value="{{ $blog->slug }}" :old=" old('slug') "/>
+                        <x-input name='slug' title="Slug" type="text" value="{{ $blog->slug }}"/>
 
-                        <x-input name="photo" title="Photo" type="file" value="{{ $blog->photo }}" :old=" old('photo') "/>
+                        <x-input name="photo" title="Photo" type="file" value="{{ $blog->photo }}"/>
 
                         <div class="container">
                             <img src="{{ $blog->photo }}" class="img-thumbnail" alt="{{ $blog->name }}">
                         </div>
 
-                        <x-input name="intro" title="Intro" type="text" value="{{ $blog->intro }}" :old=" old('intro') "/>
+                        <x-input name="intro" title="Intro" type="text" value="{{ $blog->intro }}"/>
 
-                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" value="{{ $blog->body }}" :old=" old('body') "/>
-
+                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" value="{{ $blog->body }}"/>
                         <x-category-input id="{{ $blog->category->id }}"/>
 
                         <button type="submit" class="btn btn-primary">Submit</button>

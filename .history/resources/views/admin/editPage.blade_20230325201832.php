@@ -24,7 +24,7 @@
 
                         <x-input name="intro" title="Intro" type="text" value="{{ $blog->intro }}" :old=" old('intro') "/>
 
-                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" value="{{ $blog->body }}" :old=" old('body') "/>
+                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" value="{{ $blog->body }}"/>
 
                         <x-category-input id="{{ $blog->category->id }}"/>
 

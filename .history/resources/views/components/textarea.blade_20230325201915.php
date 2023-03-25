@@ -11,7 +11,7 @@ id="{{ $id }}"
  class="form-control"
  id="{{ $id }}"
  placeholder="Enter {{ $name }}">
- {!! $old ? $old : $value!!}
+ {!! $value !!}
 </textarea>
 <x-error name='{{ $name }}'/>
 </div>

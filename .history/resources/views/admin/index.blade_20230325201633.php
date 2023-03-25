@@ -11,15 +11,15 @@
                     <form class='form' action="/admin/blogs" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <x-input name='title' title="Title" type="text" :old=" old('title') "/>
+                        <x-input name='title' title="Title" type="text" :old=" old('title') }}"/>
 
-                        <x-input name='slug' title="Slug" type="text" :old=" old('slug') "/>
+                        <x-input name='slug' title="Slug" type="text" :old="{{ old('slug') }}"/>
 
-                        <x-input name="photo" title="Photo" type="file" :old=" old('photo') "/>
+                        <x-input name="photo" title="Photo" type="file" :old="{{ old('photo') }}"/>
 
-                        <x-input name="intro" title="Intro" type="text" :old=" old('intro') "/>
+                        <x-input name="intro" title="Intro" type="text" :old="{{ old('intro') }}"/>
 
-                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" :old=" old('body') "/>
+                        <x-textarea id="summernote" name="body" title="Body" cols="10" rows="15" :old="{{ old('body') }}"/>
 
                         <x-category-input/>
 
